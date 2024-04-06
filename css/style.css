@@ -258,7 +258,7 @@ img.pull-right {
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
-  background: #ff007a;
+  background: #f58634;
   height: 50px;
   padding: 0 35px;
   line-height: 50px;
@@ -502,7 +502,7 @@ img.pull-right {
     .header.header-transparent.nav-border .navbar {
       padding: 0px 0; }
     .header.header-transparent.nav-border ul.navbar-nav > li.header-ticket .ticket-btn {
-      background: #3a6af0; }
+      background: #f58634; }
 
 .header.h-transparent2 {
   padding: 30px 0; }
