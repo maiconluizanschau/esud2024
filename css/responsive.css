@@ -270,9 +270,9 @@ small device /mobile sm and large
   .header.header-transparent.nav-border .navbar {
     padding: 10px 0; }
   .header .navbar-light .navbar-toggler {
-    background: #e7015e;
+    background: #005c8b;
     color: #fff;
-    border-color: #e7015e; }
+  }
   .header ul.navbar-nav > li > a {
     line-height: 40px !important; }
     .header ul.navbar-nav > li > a i {
