@@ -277,7 +277,7 @@ img.pull-right {
     outline: none; }
   .btn:hover {
     color: #fff;
-    background: #d20055;
+    background: #005c8b;
     -webkit-box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15); }
   .btn.fill {
@@ -455,10 +455,10 @@ img.pull-right {
     height: 40px;
     line-height: 40px;
     padding: 0px 25px;
-    background: #00c1c1;
+    background: #f58634;
     margin-left: 30px; }
     .header ul.navbar-nav > li.header-ticket .ticket-btn:hover {
-      background: #e7015e; }
+      background: #005c8b; }
 
 .header ul.navbar-nav li .dropdown-menu {
   padding: 10px 20px;
