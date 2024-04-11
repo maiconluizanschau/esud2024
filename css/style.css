@@ -456,6 +456,7 @@ img.pull-right {
     line-height: 40px;
     padding: 0px 25px;
     background: #f58634;
+    color: #f58634;
     margin-left: 30px; }
     .header ul.navbar-nav > li.header-ticket .ticket-btn:hover {
       background: #005c8b; }
@@ -481,7 +482,6 @@ img.pull-right {
 
 .header.header-transparent {
   background: white;
-  opacity: 90%;
   position: absolute;
   width: 100%;
   left: 0;
@@ -561,7 +561,7 @@ img.pull-right {
   top: 0;
   width: 100%;
   z-index: 99;
-  background: rgb(255 255 255 / 95%);
+  background: rgb(255 255 255);
   padding: 5px 0; }
   .header.sticky .navbar {
     padding: 0; }
