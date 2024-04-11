@@ -480,6 +480,8 @@ img.pull-right {
     border-bottom: none; }
 
 .header.header-transparent {
+  background: white;
+  opacity: 90%;
   position: absolute;
   width: 100%;
   left: 0;
@@ -494,7 +496,7 @@ img.pull-right {
     position: relative;
     top: 5px; }
     .header.header-transparent ul.navbar-nav > li > a {
-      color: #fff;
+      color: #000000;
       line-height: 72px; }
   .header.header-transparent.nav-border {
     border-bottom: 1px solid #363d8a;
@@ -559,7 +561,7 @@ img.pull-right {
   top: 0;
   width: 100%;
   z-index: 99;
-  background: rgba(26, 24, 49, 0.95);
+  background: rgb(255 255 255 / 95%);
   padding: 5px 0; }
   .header.sticky .navbar {
     padding: 0; }
