@@ -2264,7 +2264,6 @@ img.pull-right {
     width: 100%;
     height: 100%;
     background-image: url(../images/lines-2.png);
-    content: '';
     background-repeat: no-repeat;
     background-position: center;
     z-index: 0; }
@@ -2280,8 +2279,6 @@ img.pull-right {
 /*====================================
          ts newsletter
  ====================================*/
-.ts-footer-newsletter {
-  position: relative; }
 
 .ts-newsletter {
   background-repeat: no-repeat;
@@ -2353,10 +2350,10 @@ img.pull-right {
  ==================================*/
 .ts-footer {
   background: #1a1831;
-  padding: 250px 0 50px; }
+  padding: 50px 50px; }
 
 .ts-footer-social ul {
-  padding: 0; }
+  margin-top:-40px; }
   .ts-footer-social ul li {
     display: inline-block;
     list-style: none; }
