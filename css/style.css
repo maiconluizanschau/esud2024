@@ -1526,7 +1526,7 @@ img.pull-right {
   -ms-flex-direction: row;
   flex-direction: row; }
   .schedule-listing .schedule-slot-time {
-    background: #d20055;
+    background: #005c8b;
     color: #fff;
     padding: 60px 28px;
     font-size: 18px;
@@ -1566,7 +1566,7 @@ img.pull-right {
   .schedule-listing:hover .schedule-slot-title {
     color: #3b1d82; }
   .schedule-listing:nth-of-type(even) .schedule-slot-time {
-    background: #e7015e; }
+    background: #f58634; }
   .schedule-listing.launce .schedule-slot-time {
     padding: 40px 28px; }
   .schedule-listing.launce .schedule-slot-title {
