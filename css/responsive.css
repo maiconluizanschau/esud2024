@@ -66,9 +66,9 @@ tab device
     width: auto;
     height: auto; }
   .header .navbar-light .navbar-toggler {
-    background: #e7015e;
+    background: #f58634;
     color: #fff;
-    border-color: #e7015e; }
+    border-color: #f58634; }
   .header ul.navbar-nav > li > a {
     line-height: 40px !important; }
     .header ul.navbar-nav > li > a i {
@@ -84,7 +84,7 @@ tab device
     background: #e7015e;
     color: #fff; }
   .header-transparent .navbar-nav {
-    background: #222;
+    background: #bdbfc1;
     padding: 20px 0; }
     .header-transparent .navbar-nav li .dropdown-menu li a {
       color: #fff !important; }
@@ -270,9 +270,10 @@ small device /mobile sm and large
   .header.header-transparent.nav-border .navbar {
     padding: 10px 0; }
   .header .navbar-light .navbar-toggler {
-    background: #e7015e;
+    background: #f58634;
     color: #fff;
-    border-color: #e7015e; }
+    border:#f58634;
+  }
   .header ul.navbar-nav > li > a {
     line-height: 40px !important; }
     .header ul.navbar-nav > li > a i {
@@ -303,7 +304,7 @@ small device /mobile sm and large
     background: #e7015e;
     color: #fff; }
   .header-transparent .navbar-nav {
-    background: #222;
+    background: #bdbfc1;
     padding: 20px 0; }
   .header-transparent .dropdown-menu {
     background: transparent;
