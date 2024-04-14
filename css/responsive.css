@@ -676,5 +676,39 @@ small device /mobile sm and large
   .header .navbar-nav {
     position: static;
     margin: 0px; } }
-
+  @media (max-width: 450px) {
+    .ts-schedule-info ul li a {
+      position: absolute;
+      padding: 8px;
+      width: 70px;
+      height:70px;
+    }
+    .ts-schedule-info ul li a h3{
+      margin-top:10px;
+      font-size:10px;
+    }
+    .ts-schedule-info ul li a span{
+      font-size:8px;
+    }
+    .ts-schedule-info ul li:nth-child(1) a {
+        top: 30px; }
+      .ts-schedule-info ul li:nth-child(2) a {
+        left: 70px; }
+      .ts-schedule-info ul li:nth-child(3) a {
+        top: 30px;
+        left: 140px;
+        right: auto; }
+    .ts-schedule-info ul li:nth-child(4) a {
+          top:0;
+          left: 210px;
+    }
+    .ts-schedule-info ul li:nth-child(5) a {
+          top:30px;
+          left: 280px;
+          right: auto;
+        background-image: -webkit-linear-gradient(340deg, #fc6076 0%, #ff9a44 100%);
+        background-image: -o-linear-gradient(340deg, #fc6076 0%, #ff9a44 100%);
+        background-image: linear-gradient(110deg, #fc6076 0%, #ff9a44 100%);
+    }
+  }
 /*# sourceMappingURL=responsive.css.map */
