@@ -111,29 +111,21 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="banner-content-wrap">
-
-                                <p class="banner-info wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">14 a
-                                    18
-                                    de Outubro de 2024</p>
+                                <p class="banner-info wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
+                                    14 a 18 de Outubro de 2024
+                                </p>
                                 <h1 class="banner-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="700ms">
-                                    todas
-                                    as trilhas de conhecimento levam para o ESUD</h1>
+                                    Todas as trilhas de conhecimento levam para o ESUD
+                                </h1>
 
                                 <div class="banner-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="800ms">
                                     <a href="#" class="btn">Inscreva-se</a>
                                 </div>
 
                             </div>
-                            <!-- Banner content wrap end -->
-                        </div><!-- col end-->
-                        <!--Aguardando definição arte                   <div class="col-lg-4 align-self-end">
-                           <div class="banner-img">
-                              <img src="images/hero_area/banner_img.png" alt="">
-                           </div>
-                           -->
-                    </div><!-- row end-->
+                        </div>
+                    </div>
                 </div>
-                <!-- Container end -->
             </div>
             <!-- banner slice image-->
             <div class="tiles">
@@ -1111,8 +1103,9 @@
                                     <div class="ts-progress">
                                         <div class="ts-progress-inner" style="width: 100%"></div>
                                     </div>
-                                    <p class="ts-pricing-value">{{ modalidade.timestart }} Até {{ modalidade.timeend
-                                        }}</p>
+                                    <p class="ts-pricing-value">
+                                        {{ modalidade.timestart }} Até {{ modalidade.timeend }}
+                                    </p>
                                 </div>
                                 <div class="promotional-code">
                                     <a href="#" class="btn pricing-btn">Inscreva-se</a>
@@ -1341,7 +1334,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="speaker-shap">
                     <img class="shap1" src="images/shap/home_speaker_memphis1.png" alt="">
@@ -1355,6 +1347,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <section v-if="patrocinadores.length" class="ts-intro-sponsors">
@@ -1403,7 +1396,7 @@
                                     <div class="direction-tabs-content">
                                         <h3>{{local[0].street}} N° {{local[0].number}} </h3>
                                         <p class="derecttion-vanue">
-                                            Bairro: {{local[0].district}} - CEP: {{local[0].zipcode}} </br>
+                                            Bairro: {{local[0].district}} - CEP: {{local[0].zipcode}} <br>
                                             {{local[0].city}} - {{local[0].region}}
                                         </p>
                                         <div class="row">
@@ -1590,7 +1583,7 @@
                                     <li v-if="info.linkedin">
                                         <a :href="info.linkedin"><i class="fa fa-linkedin"></i></a>
                                     </li>
-                                    <li v-if="info.instragram">
+                                    <li v-if="info.instagram">
                                         <a :href="info.instagram"><i class="fa fa-instagram"></i></a>
                                     </li>
                                 </ul>
