@@ -401,12 +401,18 @@
                     <div class="col-lg-12">
                         <div class="tab-content schedule-tabs">
                             <div role="tabpanel" class="tab-pane active" id="date1">
-                                <div class="schedule-listing" v-for="programacao in agenda" v-if="programacao.start.slice(8,10)==14">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==14">
                                     <div class="schedule-slot-time">
-                                        <span>Dia {{programacao.start.slice(8,10)}}<br> {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>{{programacao.title}}</span>
-                                        
+                                        <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
                                     </div>
                                     <div class="schedule-slot-info">
+                                        <a href="#">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
+                                        </a>
                                         <div class="schedule-slot-info-content">
                                             <h3 class="schedule-slot-title">
                                                 {{programacao.title}}
@@ -419,11 +425,18 @@
                                 <!--schedule-listing end -->
                             </div>
                             <div role="tabpanel" class="tab-pane" id="date2">
-                                <div class="schedule-listing" v-for="programacao in agenda" v-if="programacao.start.slice(8,10)==15">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==15">
                                     <div class="schedule-slot-time">
-                                        <span>Dia {{programacao.start.slice(8,10)}}<br> {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>{{programacao.title}}</span>
+                                       <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
                                     </div>
                                     <div class="schedule-slot-info">
+                                        <a href="#">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
+                                        </a>
                                         <div class="schedule-slot-info-content">
                                             <h3 class="schedule-slot-title">
                                                 {{programacao.title}}
@@ -436,11 +449,18 @@
                                 <!--schedule-listing end -->
                             </div>
                             <div role="tabpanel" class="tab-pane" id="date3">
-                                <div class="schedule-listing" v-for="programacao in agenda" v-if="programacao.start.slice(8,10)==16">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==16">
                                     <div class="schedule-slot-time">
-                                        <span>Dia {{programacao.start.slice(8,10)}}<br> {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>{{programacao.title}}</span>
+                                        <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
                                     </div>
                                     <div class="schedule-slot-info">
+                                        <a href="#">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
+                                        </a>
                                         <div class="schedule-slot-info-content">
                                             <h3 class="schedule-slot-title">
                                                 {{programacao.title}}
@@ -453,12 +473,20 @@
                                 <!--schedule-listing end -->
                             </div>
                             <div role="tabpanel" class="tab-pane" id="date4">
-                                <div class="schedule-listing" v-for="programacao in agenda" v-if="programacao.start.slice(8,10)==17">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==17">
                                     <div class="schedule-slot-time">
-                                        <span>Dia {{programacao.start.slice(8,10)}}<br> {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>{{programacao.title}}</span>
+                                        <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
                                     </div>
                                     <div class="schedule-slot-info">
+                                        <a href="#">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
+                                        </a>
                                         <div class="schedule-slot-info-content">
+
                                             <h3 class="schedule-slot-title">
                                                 {{programacao.title}}
                                             </h3>
@@ -470,11 +498,18 @@
                                 <!--schedule-listing end -->
                             </div>
                             <div role="tabpanel" class="tab-pane" id="date5">
-                                <div class="schedule-listing" v-for="programacao in agenda" v-if="programacao.start.slice(8,10)==18">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==18">
                                     <div class="schedule-slot-time">
-                                        <span>Dia {{programacao.start.slice(8,10)}}<br> {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>{{programacao.title}}</span>
+                                        <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
                                     </div>
                                     <div class="schedule-slot-info">
+                                        <a href="#">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
+                                        </a>
                                         <div class="schedule-slot-info-content">
                                             <h3 class="schedule-slot-title">
                                                 {{programacao.title}}
@@ -687,7 +722,8 @@
                         <div class="ts-speaker">
                             <div class="speaker-img">
                                 <img class="img-fluid" :src="people.img" :alt="people.name">
-                                <a :href="'#popup_'+idcategoria+'x'+idpeople" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
+                                <a :href="'#popup_'+idcategoria+'x'+idpeople" class="view-speaker ts-image-popup"
+                                   data-effect="mfp-zoom-in">
                                     <i class="icon icon-plus"></i>
                                 </a>
                             </div>
