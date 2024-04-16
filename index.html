@@ -380,10 +380,8 @@
                                         <span>Quarta-feira</span>
                                     </a>
                                 </li>
-                            </ul>
-                            <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                    <a class="active" title="Click Me" href="#date4" role="tab" data-toggle="tab">
+                                    <a class="" title="Click Me" href="#date4" role="tab" data-toggle="tab">
                                         <h3>17 Outubro</h3>
                                         <span>Quinta-feira</span>
                                     </a>
@@ -403,665 +401,126 @@
                     <div class="col-lg-12">
                         <div class="tab-content schedule-tabs">
                             <div role="tabpanel" class="tab-pane active" id="date1">
-                                <div class="schedule-listing">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==14">
                                     <div class="schedule-slot-time">
-                                        <span> 8.30 - 09.30 AM</span>
-                                        Credenciamento
+                                        <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
                                     </div>
                                     <div class="schedule-slot-info">
                                         <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/ufsm.png"
-                                                 alt="">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
                                         </a>
                                         <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Credenciamento
-
+                                            <h3 class="schedule-slot-title">
+                                                {{programacao.title}}
                                             </h3>
-                                            <p>Credenciamento e Recepção aos convidados </p>
+                                            <p>{{programacao.abstract}}</p>
                                         </div>
                                         <!--Info content end -->
                                     </div><!-- Slot info end -->
                                 </div>
                                 <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 10.30 - 11.30 AM</span>
-                                        Reunião - DED CAPES
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/capes.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Reunião - DED CAPES
-
-                                            </h3>
-                                            <p> Capacitação</p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 10.15 - 10.30 PM</span>
-                                        Coffee-break
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/break.png"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Coffee-break
-
-                                            </h3>
-                                            <p>Coffee-break </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 10.15 - 10.30 PM</span>
-                                        Reunião - DED CAPES
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/uabfederal.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Reunião do Fórum de Coordenadores UAB -
-                                                ForUAB
-
-                                            </h3>
-                                            <p>Reunião - DED CAPES (Capacitação)</p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing launce">
-                                    <div class="schedule-slot-time">
-                                        <span> 12.30 - 01.30 PM</span>
-                                    </div>
-                                    <div class="schedule-slot-info">
-
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Almoço
-                                                <strong>@ cnpq</strong>
-                                            </h3>
-                                            <a href="#">
-                                                <img src="images/schedule_lunch.png" alt="">
-                                            </a>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 13.30 - 14.00 PM</span>
-                                        Credenciamento
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/ufsm.png"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Credenciamento
-
-                                            </h3>
-                                            <p>Credenciamento e Recepção aos convidados </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 14.00 - 15.30 PM</span>
-                                        Reunião
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/capes.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Reunião - DED CAPES (Capacitação)
-
-                                            </h3>
-                                            <p>Reunião - DED CAPES (Capacitação) </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 15.30 - 15.45 PM</span>
-                                        Coffee-break
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/break.png"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Coffee-break
-
-                                            </h3>
-                                            <p>Coffee-break </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 13.45 - 17.30 PM</span>
-                                        Reunião
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/capes.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Reunião - DED CAPES (Capacitação)
-
-                                            </h3>
-                                            <p>Reunião - DED CAPES (Capacitação)</p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 17.30 - 19.30 PM</span>
-                                        Oficinas
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/oficina.png"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Oficinas
-
-                                            </h3>
-                                            <p>Oficinas </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 19.30 - 21.30 PM</span>
-                                        Happy hour
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/happy.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Happy hour
-
-                                            </h3>
-                                            <p>Happy hour </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing-btn">
-                                    <a href="#" class="btn">Inscreva-se</a>
-                                </div>
                             </div>
-
                             <div role="tabpanel" class="tab-pane" id="date2">
-                                <div class="schedule-listing">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==15">
                                     <div class="schedule-slot-time">
-                                        <span> 08.30 - 10.15 AM</span>
-                                        Reunião
+                                       <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
                                     </div>
                                     <div class="schedule-slot-info">
                                         <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/capes.jpeg"
-                                                 alt="">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
                                         </a>
                                         <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Reunião de Fórum de Coordenadores UAB
-                                                (FORUAB)
-
+                                            <h3 class="schedule-slot-title">
+                                                {{programacao.title}}
                                             </h3>
-                                            <p>Reunião de Fórum de Coordenadores UAB (FORUAB)</p>
+                                            <p>{{programacao.abstract}}</p>
                                         </div>
                                         <!--Info content end -->
                                     </div><!-- Slot info end -->
                                 </div>
                                 <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 10.15 - 10.30 AM</span>
-                                        Coffee-break'
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/break.png"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Coffee-break
-
-
-                                            </h3>
-                                            <p>Coffee-break
-                                            </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 10.30 - 12.30 PM</span>
-                                        Reunião
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/uabfederal.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Reunião de Fórum de Coordenadores UAB
-                                                (FORUAB)
-
-                                            </h3>
-                                            <p>Reunião de Fórum de Coordenadores UAB (FORUAB)</p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing launce">
-                                    <div class="schedule-slot-time">
-                                        <span> 12.30 - 01.30 PM</span>
-                                    </div>
-                                    <div class="schedule-slot-info">
-
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Almoço
-                                                <strong>@ Ufsm</strong>
-                                            </h3>
-                                            <a href="#">
-                                                <img src="images/schedule_lunch.png" alt="">
-                                            </a>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 13.30 - 14.00 PM</span>
-                                    </div>
-                                    <div class="schedule-slot-info">
-
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Apresentação Cultural
-                                                <strong>@ Banda</strong>
-                                            </h3>
-                                            <a href="#">
-                                                <img src="images/schedule_lunch.png" alt="">
-                                            </a>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 14.00 - 15.30 PM</span>
-                                        Reunião
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/uabfederal.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Reunião
-
-                                            </h3>
-                                            <p>Reunião de Fórum de Coordenadores UAB (FORUAB)</p>
-                                            <p>Reunião Coordenadores de Polo UAB (outro auditório)
-                                            </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 15.30 - 15.45 PM</span>
-                                        Coffee-break
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/break.png"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Coffee-break
-
-
-                                            </h3>
-                                            <p>Coffee-break
-                                            </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-
-
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 15.45 - 17.30 PM</span>
-                                        Reunião
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/uabfederal.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Reunião
-
-                                            </h3>
-                                            <p>Reunião de Fórum de Coordenadores UAB (FORUAB)</p>
-                                            <p>Reunião Coordenadores de Polo UAB (outro auditório)
-                                            </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 17.30 - 19.30 PM</span>
-                                        Abertura Oficial
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/ufsm.png"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Abertura Oficial
-
-                                            </h3>
-                                            <p>Palestra de abertura do evento
-                                            </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 19.30 - 21.30 PM</span>
-                                        Happy hour
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/happy.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Happy hour
-
-                                            </h3>
-                                            <p>Happy hour </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing-btn">
-                                    <a href="#" class="btn">Inscreva-se</a>
-                                </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="date3">
-                                <div class="schedule-listing">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==16">
                                     <div class="schedule-slot-time">
-                                        <span> 08.30 - 10.15 AM</span>
-                                        Apresentação
+                                        <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
                                     </div>
                                     <div class="schedule-slot-info">
                                         <a href="#">
-                                            <img class="schedule-slot-speakers"
-                                                 src="images/programacao/apresentation.jpeg"
-                                                 alt="">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
                                         </a>
                                         <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Apresentação de trabalhos
-
+                                            <h3 class="schedule-slot-title">
+                                                {{programacao.title}}
                                             </h3>
-                                            <p>Apresentação de trabalhos </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 10.15 - 10.30 AM</span>
-                                        Coffee-break
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/break.png"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Coffee-break
-
-
-                                            </h3>
-                                            <p>Coffee-break
-                                            </p>
+                                            <p>{{programacao.abstract}}</p>
                                         </div>
                                         <!--Info content end -->
                                     </div><!-- Slot info end -->
                                 </div>
                                 <!--schedule-listing end -->
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 10.30 - 12.30 PM</span>
-                                        Painel temático
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers"
-                                                 src="images/programacao/transformacao.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Painel temático
-
-                                            </h3>
-                                            <p>Painel temático - Tranformação Digital, Inovação e Inteligência
-                                                Artificial na
-                                                Educação Aberta e a distância </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing launce">
-                                    <div class="schedule-slot-time">
-                                        <span> 12.30 - 13.30 PM</span>
-                                    </div>
-                                    <div class="schedule-slot-info">
-
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Almoço
-                                                <strong>@ Nupead</strong>
-                                            </h3>
-                                            <a href="#">
-                                                <img src="images/schedule_lunch.png" alt="">
-                                            </a>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 13.30 - 14.00 PM</span>
-                                        Lançamentos
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/livros.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Lançamentos
-
-                                            </h3>
-                                            <p>Lançamentos de Livros, Jogos e Artefatos tecnológicos</p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-
-
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 14.00 - 15.30 PM</span>
-                                        Apresentação
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers"
-                                                 src="images/programacao/apresentacao.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Apresentação de trabalhos
-
-                                            </h3>
-                                            <p>Apresentação de trabalhos</p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-
-
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 15.30 - 15.45 PM</span>
-                                        Coffee-break
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/break.png"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Coffee-break
-
-
-                                            </h3>
-                                            <p>Coffee-break
-                                            </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-                                <!--schedule-listing end -->
-
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 15.45 - 17.30 PM</span>
-                                        Painel Temático
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers"
-                                                 src="images/programacao/paineltematico.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Painel Temático
-
-                                            </h3>
-                                            <p>Painel Temático Qualidade e Institucionalização em Educação Aberta e a
-                                                distância </p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-
-
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 17.30 - 19.30 PM</span>
-                                        Apresentação
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers"
-                                                 src="images/programacao/apresentation.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Apresentação
-
-                                            </h3>
-                                            <p>Apresentação de Trabalhos</p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-
-                                <div class="schedule-listing">
-                                    <div class="schedule-slot-time">
-                                        <span> 19.30 - 21.30 PM</span>
-                                        Jantar
-                                    </div>
-                                    <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img class="schedule-slot-speakers" src="images/programacao/jantar.jpeg"
-                                                 alt="">
-                                        </a>
-                                        <div class="schedule-slot-info-content">
-                                            <h3 class="schedule-slot-title">Jantar
-
-                                            </h3>
-                                            <p>Jantar por Adesão</p>
-                                        </div>
-                                        <!--Info content end -->
-                                    </div><!-- Slot info end -->
-                                </div>
-
-                                <!--schedule-listing end -->
-                                <div class="schedule-listing-btn">
-                                    <a href="#" class="btn">Inscreva-se</a>
-                                </div>
                             </div>
+                            <div role="tabpanel" class="tab-pane" id="date4">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==17">
+                                    <div class="schedule-slot-time">
+                                        <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
+                                    </div>
+                                    <div class="schedule-slot-info">
+                                        <a href="#">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
+                                        </a>
+                                        <div class="schedule-slot-info-content">
 
+                                            <h3 class="schedule-slot-title">
+                                                {{programacao.title}}
+                                            </h3>
+                                            <p>{{programacao.abstract}}</p>
+                                        </div>
+                                        <!--Info content end -->
+                                    </div><!-- Slot info end -->
+                                </div>
+                                <!--schedule-listing end -->
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="date5">
+                                <div class="schedule-listing" v-for="programacao in agenda"
+                                     v-if="programacao.start.slice(8,10)==18">
+                                    <div class="schedule-slot-time">
+                                        <span>Dia {{programacao.start.slice(8, 10)}}<br>
+                                            {{programacao.start.slice(11, 16)}} - {{programacao.end.slice(11, 16)}}<br>
+                                            {{programacao.type ? programacao.type : programacao.title}}
+                                        </span>
+                                    </div>
+                                    <div class="schedule-slot-info">
+                                        <a href="#">
+                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
+                                        </a>
+                                        <div class="schedule-slot-info-content">
+                                            <h3 class="schedule-slot-title">
+                                                {{programacao.title}}
+                                            </h3>
+                                            <p>{{programacao.abstract}}</p>
+                                        </div>
+                                        <!--Info content end -->
+                                    </div><!-- Slot info end -->
+                                </div>
+                                <!--schedule-listing end -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1263,7 +722,8 @@
                         <div class="ts-speaker">
                             <div class="speaker-img">
                                 <img class="img-fluid" :src="people.img" :alt="people.name">
-                                <a :href="'#popup_'+idcategoria+'x'+idpeople" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
+                                <a :href="'#popup_'+idcategoria+'x'+idpeople" class="view-speaker ts-image-popup"
+                                   data-effect="mfp-zoom-in">
                                     <i class="icon icon-plus"></i>
                                 </a>
                             </div>
