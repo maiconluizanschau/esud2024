@@ -637,134 +637,10 @@
             </div>
         </section>
         <!-- ts pricing end-->
-        <!-- ts blog start-->
-        <section class="ts-blog section-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="section-title">
-                            <span>Blog</span>
-                            Confira as ultimas novidades
-                        </h2>
-                    </div><!-- col end-->
-                </div><!-- row end-->
-                <div class="row">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
-                        <div class="post">
-                            <div class="post-media post-image">
-                                <a href="#"><img src="images/blog/blog1.jpg" class="img-fluid" alt=""></a>
-                            </div>
-
-                            <div class="post-body">
-                                <div class="post-meta">
-                           <span class="post-author">
-                           
-                           </span>
-
-                                    <div class="post-meta-date">
-                                        October 8, 2018
-                                    </div>
-                                </div>
-                                <div class="entry-header">
-                                    <h2 class="entry-title">
-                                        <a href="#">Check upcoming Events</a>
-                                    </h2>
-                                </div><!-- header end -->
-
-                                <div class="entry-content">
-                                    <p>How you transform your business asap technology, consumer,</p>
-                                </div>
-
-                                <div class="post-footer">
-                                    <a href="news-single.html" class="btn-link">Read More <i
-                                            class="icon icon-arrow-right"></i></a>
-                                </div>
-
-                            </div><!-- post-body end -->
-                        </div><!-- post end-->
-                    </div><!-- col end-->
-                    <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
-                        <div class="post">
-                            <div class="post-media post-image">
-                                <a href="#"><img src="images/blog/blog2.jpg" class="img-fluid" alt=""></a>
-                            </div>
-
-                            <div class="post-body">
-                                <div class="post-meta">
-                           <span class="post-author">
-                                <a href="#">BY Admin</a>
-                              </span>
-
-                                    <div class="post-meta-date">
-                                        October 8, 2018
-                                    </div>
-                                </div>
-                                <div class="entry-header">
-                                    <h2 class="entry-title">
-                                        <a href="#">Adding a New Digital</a>
-                                    </h2>
-                                </div><!-- header end -->
-
-                                <div class="entry-content">
-                                    <p>How you transform your business asap technology, consumer,</p>
-                                </div>
-
-                                <div class="post-footer">
-                                    <a href="news-single.html" class="btn-link">Read More <i
-                                            class="icon icon-arrow-right"></i></a>
-                                </div>
-
-                            </div><!-- post-body end -->
-                        </div><!-- post end-->
-                    </div><!-- col end-->
-                    <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">
-                        <div class="post">
-                            <div class="post-media post-image">
-                                <a href="#"><img src="images/blog/blog3.jpg" class="img-fluid" alt=""></a>
-                            </div>
-
-                            <div class="post-body">
-                                <div class="post-meta">
-                           <span class="post-author">
-                                   <a href="#">BY Admin</a>
-                                 </span>
-
-                                    <div class="post-meta-date">
-                                        October 8, 2018
-                                    </div>
-                                </div>
-                                <div class="entry-header">
-                                    <h2 class="entry-title">
-                                        <a href="#">West Elm At Evantor</a>
-                                    </h2>
-                                </div><!-- header end -->
-
-                                <div class="entry-content">
-                                    <p>How you transform your business asap technology, consumer,</p>
-                                </div>
-
-                                <div class="post-footer">
-                                    <a href="news-single.html" class="btn-link">Read More <i
-                                            class="icon icon-arrow-right"></i></a>
-                                </div>
-
-                            </div><!-- post-body end -->
-                        </div><!-- post end-->
-                    </div><!-- col end-->
-                </div><!-- row end-->
-            </div><!-- container end-->
-            <!-- shap image-->
-            <div class="speaker-shap">
-                <img class="shap2" src="images/shap/news_memphis2.png" alt="">
-                <img class="shap1" src="images/shap/news_memphis1.png" alt="">
-            </div>
-        </section>
-        <!-- ts blog end-->
 
 
         <!-- ts speaker start-->
-        <section v-if="organizadores.length" id="ts-speakers2" class="ts-speakers speaker-classic"
-                 style="background-image:url(images/speakers/speaker_bg.png)">
+        <section v-if="organizadores.length" id="ts-speakers2" class="ts-speakers speaker-classic">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
@@ -773,32 +649,17 @@
                         </h2>
                     </div>
                 </div>
-                <div v-for="(categoria, idcategoria) in organizadores" class="row">
-                    <div v-for="(people,idpeople) in categoria.people" class="col-lg-3 col-md-6">
-                        <div class="ts-speaker">
-                            <div class="speaker-img">
-                                <img class="img-fluid" :src="people.img" :alt="people.name">
-                                <a :href="'#popup_'+idcategoria+'x'+idpeople" class="view-speaker ts-image-popup"
-                                   data-effect="mfp-zoom-in">
-                                    <i class="icon icon-plus"></i>
+                <div v-for="(categoria, idcategoria) in organizadores" style="border: 5px solid #b3cedc; border-radius: 40px; margin-bottom: 30px;">
+                    <h3 style="text-align: center; margin-top: 20px; color: #005c8b;">{{categoria.name}}</h3><br>
+                    <div v-for="(people,idpeople) in categoria.people" style="text-align: center;">
+                            <div class="ts-speaker-info">
+                                <strong style="color: #005c8b;">{{people.name}}</strong>
+                                <a :href="'#popup_'+idcategoria+'x'+idpeople" style="color: #f58634;">
+                                    <strong>+</strong>
                                 </a>
                             </div>
-                            <div class="ts-speaker-info">
-                                <h3 class="ts-title">
-                                    <a href="#">{{people.name}}</a>
-                                </h3>
-                                <p>
-                                    {{people.job}}
-                                </p>
-                            </div>
-                        </div>
                         <div :id="'popup_'+idcategoria+'x'+idpeople" class="container ts-speaker-popup mfp-hide">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="ts-speaker-popup-img">
-                                        <img :src="people.img" :alt="people.name">
-                                    </div>
-                                </div><!-- col end-->
                                 <div class="col-lg-6">
                                     <div class="ts-speaker-popup-content">
                                         <h3 class="ts-title">{{people.name}}</h3>
@@ -850,11 +711,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="speaker-shap">
-                    <img class="shap1" src="images/shap/home_speaker_memphis1.png" alt="">
-                    <img class="shap2" src="images/shap/home_speaker_memphis2.png" alt="">
-                    <img class="shap3" src="images/shap/home_speaker_memphis3.png" alt="">
+                    <div style="margin-bottom: 40px;"></div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
@@ -918,24 +775,14 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="contact-info-box">
-                                                    <h3>Informações inscrições </h3>
+                                                    <h3>Informações</h3>
                                                     <p><strong>Name:</strong> {{info.contact.name}}</p>
                                                     <p><strong>Phone:</strong> {{info.contact.telphone}}</p>
                                                     <p><strong>Email: </strong> <a href="#"
-                                                                                   class="__cf_email__">{{info.contact.email}}</a>
+                                                        class="__cf_email__">{{info.contact.email}}</a>
                                                     </p>
                                                 </div>
 
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="contact-info-box">
-                                                    <h3>Programme Details </h3>
-                                                    <p><strong>Name:</strong> sag</p>
-                                                    <p><strong>Phone:</strong>646546</p>
-                                                    <p><strong>Email: </strong> <a href="#" class="__cf_email__"
-                                                                                   data-cfemail="caa3a4aca58aafb2aba7baa6afe4a9a5a7">[email&#160;protected]</a>
-                                                    </p>
-                                                </div>
                                             </div>
                                         </div><!-- row end-->
                                     </div><!-- direction tabs end-->
@@ -1054,40 +901,6 @@
                                 </h2>
                                 <a href="#" class="btn">Inscreva-se</a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="ts-footer-newsletter">
-                        <div class="ts-newsletter" style="background-image: url(images/shap/subscribe_pattern.png)">
-                            <div class="row">
-                                <div class="col-lg-6 mx-auto">
-                                    <div class="ts-newsletter-content">
-                                        <h2 class="section-title">
-                                            <span>Inscreva-se na newsletter</span>
-                                            Estará recebendo informações extras?
-                                        </h2>
-                                    </div>
-                                    <div class="newsletter-form">
-                                        <form action="#" method="post" class="media align-items-end">
-                                            <div class="email-form-group media-body">
-                                                <input type="email" name="email" id="newsletter-form-email"
-                                                       class="form-control"
-                                                       placeholder="Digite seu E-mail" autocomplete="off" required="">
-                                            </div>
-                                            <div class="d-flex ts-submit-btn">
-                                                <button class="btn">Salvar</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <footer class="ts-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
                             <div class="ts-footer-social text-center mb-30">
                                 <ul>
                                     <li v-if="info.facebook">
@@ -1119,7 +932,7 @@
                         </div>
                     </div>
                 </div>
-            </footer>
+            </section>
             <div class="BackTo">
                 <a href="#" class="fa fa-angle-up" aria-hidden="true"></a>
             </div>

@@ -310,27 +310,11 @@ img.pull-right {
 .column-title {
   font-size: 36px;
   font-weight: 800;
-  color: #3b1d82;
+  color: #003f5e;
   position: relative;
   padding-bottom: 30px;
-  margin-bottom: 85px;
+  margin-bottom: 40px;
   text-align: center; }
-  .section-title:after,
-  .column-title:after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: '';
-    right: 0;
-    background-image: url(../images/shap/title.png);
-    background-repeat: no-repeat;
-    background-size: center center;
-    background-position: contain;
-    width: 70px;
-    height: 10px;
-    margin: auto auto 0;
-    top: auto;
-    bottom: 0; }
   .section-title span,
   .column-title span {
     display: block;
@@ -1212,9 +1196,7 @@ img.pull-right {
 ===========================*/
 .ts-speakers {
   padding-top: 120px;
-  padding-bottom: 40px;
-  position: relative;
-  overflow: hidden; }
+  padding-bottom: 40px;}
 
 .ts-speaker {
   position: relative;
@@ -1310,12 +1292,13 @@ img.pull-right {
       -ms-border-radius: 0; }
     .speaker-classic .ts-speaker .ts-speaker-info {
       position: absolute;
+      height: 40px;
       right: 0;
       bottom: -13px;
       background: #fff;
       z-index: 1;
-      width: 90%;
-      padding: 20px 0 10px; }
+      width: 100%;
+      padding: 40px 0 20px; }
       .speaker-classic .ts-speaker .ts-speaker-info .ts-title {
         margin-bottom: 0; }
       .speaker-classic .ts-speaker .ts-speaker-info p {
