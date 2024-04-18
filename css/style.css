@@ -650,7 +650,11 @@ img.pull-right {
 ===========================*/
 .hero-area {
   padding: 0; }
-
+.banner-explain{
+  font-size:18px;
+  margin-bottom: 8%;
+  font-weight: 200;
+}
 .banner-6 {
   background-position: top right;
   background-repeat: no-repeat;
