@@ -48,6 +48,9 @@ tab rotate
 tab device 
 ===========================*/
 @media (min-width: 768px) and (max-width: 991px) {
+  .single-intro-text h3{
+    text-align: center;
+  }
   .dropdown-menu.show {
     display: block; }
   .section-title {
