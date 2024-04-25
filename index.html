@@ -315,7 +315,9 @@
                                 <img class="img-fluid" :src="people.img" alt="">
                             </div>
                             <div class="ts-speaker-info">
-                                <h3 class="ts-title"><a :href="people.curriculum" onMouseOut="this.style.color='#005c8b'" onMouseOver="this.style.color='#f58634'" style="color: #005c8b; text-decoration: underline;">{{people.name}}</a></h3>
+                                <h3 class="ts-title"><a :href="people.curriculum" 
+                                    onMouseOut="this.style.color='#005c8b'" onMouseOver="this.style.color='#f58634'" style="color: #005c8b; text-decoration: underline;">
+                                    {{people.name}}</a></h3>
                                 <p>
                                     {{people.job}}
                                 </p>
@@ -415,9 +417,6 @@
                                         </span>
                                     </div>
                                     <div class="schedule-slot-info">
-                                        <a href="#">
-                                            <img :src="programacao.img" alt=""  class="schedule-slot-speakers">
-                                        </a>
                                         <div class="schedule-slot-info-content">
                                             <h3 class="schedule-slot-title">
                                                 {{programacao.title}}
