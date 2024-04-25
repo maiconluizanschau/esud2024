@@ -1203,7 +1203,33 @@ img.pull-right {
   .ts-speakers h2{
     text-shadow: 1px 1px 1px #005c8b;
   }
-
+  .modal{
+    display: none;
+    position:fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.801);
+  }
+  .modal-content{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+  }
+  .times{
+    font-size: 14px;
+    width: 20%;
+    margin-left: 550px;
+    margin-top: -60px;
+    border: none;
+    border-radius: 10px;
+  }
+  .times:hover{
+    cursor: pointer;
+  }
 .ts-speaker {
   position: relative;
   text-align: center;
@@ -1328,7 +1354,6 @@ img.pull-right {
     bottom: -25px;
     margin: auto;
     left: 6%; }
-
 .ts-speaker-popup {
   background: #fff;
   padding: 0;

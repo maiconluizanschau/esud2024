@@ -313,67 +313,32 @@
                         <div class="ts-speaker">
                             <div class="speaker-img">
                                 <img class="img-fluid" :src="people.img" alt="">
-                                <a :href="'#popups_'+id" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
-                                    <i class="icon icon-plus"></i>
-                                </a>
                             </div>
                             <div class="ts-speaker-info">
-                                <h3 class="ts-title"><a href="#">{{people.name}}</a></h3>
+                                <h3 class="ts-title"><a :href="people.curriculum" onMouseOut="this.style.color='#005c8b'" onMouseOver="this.style.color='#f58634'" style="color: #005c8b; text-decoration: underline;">{{people.name}}</a></h3>
                                 <p>
                                     {{people.job}}
                                 </p>
                             </div>
                         </div>
                         <!-- popup start-->
-                        <div :id="'popups_'+id" class="container ts-speaker-popup mfp-hide">
+                        <div :id="'popups_'+id" class="container modal">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="ts-speaker-popup-img">
-                                        <img :src="people.img" alt="">
-                                    </div>
-                                </div><!-- col end-->
-                                <div class="col-lg-6">
-                                    <div class="ts-speaker-popup-content">
+                                <div class="col-lg-10" style="margin-left: 10%;">
+                                    <div class="modal-content">
                                         <h3 class="ts-title">{{people.name}}</h3>
+                                        <button class="btn times" :id="'popups_'+id">Fechar</button>
                                         <span class="speakder-designation">{{people.job}}</span>
                                         <img class="company-logo" :src="people.img" :alt="people.name">
                                         <p>
                                             {{people.bio}}
                                         </p>
-                                        <h4 class="session-name">
-                                            Sessions by David
-                                        </h4>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="speaker-session-info">
-                                                    <h4>Day 1</h4>
-                                                    <span>
-                                                   10.30 - 11.30 am
-                                             </span>
-                                                    <p>
-                                                        Marketing Matters
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="speaker-session-info">
-                                                    <h4>Day 1</h4>
-                                                    <span>
-                                                      10.30 - 11.30 am
-                                                </span>
-                                                    <p>
-                                                        Marketing Matters
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ts-speakers-social">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <a href="#"><i class="fa fa-instagram"></i></a>
-                                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                                        </div>
+                                        <ul>
+                                            <a v-if="info.facebook" :href="info.facebook"><i class="fa fa-facebook"></i></a>
+                                            <a v-if="info.twitter" :href="info.twitter"><i class="fa fa-twitter"></i></a>
+                                            <a v-if="info.linkedin" :href="info.linkedin"><i class="fa fa-linkedin"></i></a>
+                                            <a v-if="info.instagram" :href="info.instagram"><i class="fa fa-instagram"></i></a>
+                                        </ul>
                                     </div><!-- ts-speaker-popup-content end-->
                                 </div><!-- col end-->
                             </div><!-- row end-->
@@ -603,7 +568,7 @@
                                         <div class="ts-progress-inner" style="width: 100%"></div>
                                     </div>
                                     <p class="ts-pricing-value">
-                                        {{ modalidade.timestart }} Até {{ modalidade.timeend }}
+                                        {{ modalidade.timestart.replaceAll('-', '/')}} Até {{ modalidade.timeend.replaceAll('-', '/') }}
                                     </p>
                                 </div>
                                 <div class="promotional-code">
@@ -618,8 +583,6 @@
             </div>
         </section>
         <!-- ts pricing end-->
-
-
         <!-- ts speaker start-->
         <section v-if="organizadores.length" id="ts-speakers2" class="ts-speakers speaker-classic">
             <div class="container">
@@ -637,7 +600,6 @@
                             <div class="ts-speaker-info">
                                 <strong style="color: #005c8b;">{{people.name}}</strong>
                                 <a :href="'#popup_'+idcategoria+'x'+idpeople" style="color: #f58634;">
-                                    <strong>+</strong>
                                 </a>
                             </div>
                         <div :id="'popup_'+idcategoria+'x'+idpeople" class="container ts-speaker-popup mfp-hide">
@@ -987,6 +949,7 @@
         }
     });
 </script>
+<script src="js/moment.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
