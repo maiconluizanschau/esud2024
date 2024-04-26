@@ -66,24 +66,24 @@
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ml-auto">
                             <li class="dropdown nav-item active">
-                                <a href="#" class="" data-toggle="dropdown">Evento</a>
+                                <a href="#" class="">Evento</a>
 
                             </li>
                             <li class="dropdown nav-item">
-                                <a href="#" class="" data-toggle="dropdown">Sobre</a>
+                                <a href="#sobre" class="">Sobre</a>
 
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="" data-toggle="dropdown">Programação</a>
+                                <a href="#programacao" class="">Programação</a>
 
 
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="" data-toggle="dropdown">Anais </a>
+                                <a href="#" class="">Anais</a>
 
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#"> Organização </a>
+                                <a href="#organizacao" class=""> Organização </a>
 
                             </li>
                             <li class="nav-item">
@@ -136,7 +136,7 @@
             </div>
         </section>
         <!-- banner end-->
-        <section class="ts-intro-item section-bg" >
+        <section class="ts-intro-item section-bg" id="sobre">
             <div class="container">
                 <h1 style="text-align: center; padding: 20px;">Apresentação</h3>
                     <p style="margin-top: 20px; color:#3b3b3b">
@@ -351,7 +351,7 @@
         </section>
         <!-- ts speaker end-->
         <!-- ts experience start-->
-        <section class="ts-schedule">
+        <section class="ts-schedule" id="programacao">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 align-self-center wow fadeInUp" data-wow-duration="1.5s"
@@ -583,11 +583,11 @@
         </section>
         <!-- ts pricing end-->
         <!-- ts speaker start-->
-        <section v-if="organizadores.length" id="ts-speakers2" class="ts-speakers speaker-classic">
+        <section v-if="organizadores.length" id="ts-speakers2" class="ts-speakers speaker-classic" >
             <div class="container">
-                <div class="row">
+                <div class="row" id="organizacao">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class="section-title text-center">
+                        <h2 class="section-title text-center" >
                             Organização
                         </h2>
                     </div>
