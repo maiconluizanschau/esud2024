@@ -867,12 +867,20 @@
     return element;
 }
 
-function sortingOrganizador(element){
-    
+function sortComissao(element){
     function sortname(a, b){
         return a.name.localeCompare(b.name)
     }
-    for(let i = 0; i < element.length; i++){
+    element.sort(sortname)
+}
+
+function sortingOrganizador(element){
+    sortComissao(element);
+    function sortname(a, b){ //recebe o objeto pessoa e ordena por nome
+        return a.name.localeCompare(b.name)
+    }
+
+    for(let i = 0; i < element.length; i++){ //separa por objetos
         let names = element[i].people
         names.sort(sortname)
         element[i].people = names
